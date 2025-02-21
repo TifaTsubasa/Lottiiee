@@ -26,6 +26,24 @@
     -->
     <title>React App</title>
   </head>
+  <script>
+    // 设置全局 bridge 对象
+    window.bridge = {
+      callbacks: {}, // 用于存储回调函数
+
+      callSwift: function (action, data, callback) {
+        const callbackId = Date.now().toString(); // 生成唯一的回调 ID
+        this.callbacks[callbackId] = callback; // 存储回调函数
+
+        // 发送消息到 Swift
+        window.webkit.messageHandlers.bridge.postMessage({
+          action,
+          data,
+          callbackId,
+        });
+      },
+    };
+  </script>
   <body>
     <noscript>You need to enable JavaScript to run this app</noscript>
     <div id="root"></div>

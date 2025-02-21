@@ -3,17 +3,19 @@ import './App.css';
 
 function App() {
   const handleGetVersion = async () => {
-    console.log('Bridge对象:', window.Bridge);
     console.log('webkit对象:', window.webkit);
+    console.log('handle对象:', window.webkit.messageHandlers);
+    console.log('bridge对象:', window.bridge);
     
-    if (window.Bridge) {
-      try {
-        const result = await window.Bridge.getVersion();
-        console.log('应用版本信息:', result);
-        alert(`App版本: ${result.version}\n构建版本: ${result.build}`);
-      } catch (error) {
-        console.error('获取版本信息时出错:', error);
-      }
+    if (window.bridge) {
+      window.bridge.callSwift(
+        "callSwiftFunction",
+        { value: "Hello from React!" },
+        (response) => {
+          alert("Received from Swift:" + response);
+          console.log("Received from Swift:", response);
+        }
+      );
     } else {
       console.error('Bridge未初始化');
     }
