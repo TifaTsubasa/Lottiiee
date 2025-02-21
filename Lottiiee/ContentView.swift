@@ -16,7 +16,8 @@ struct WebView: UIViewRepresentable {
         var parent: WebView
         // 添加 webView 属性以便在 Coordinator 中访问
         weak var webView: WKWebView?
-        
+        private lazy var bridges = Bridges()
+
         init(_ parent: WebView) {
             self.parent = parent
         }
@@ -37,13 +38,13 @@ struct WebView: UIViewRepresentable {
         // 处理具体的 React 调用
         func handleReactAction(action: String?, data: [String: Any]?, callbackId: String?) {
             switch action {
-            case "callSwiftFunction":
-                if let value = data?["value"] as? String {
-                    print("Received from React: \(value)")
-                    
+            case "convertJsonsToLottie":
+                if let path = data?["path"] as? String {
+                    print("Received from React: \(path)")
+                    bridges.convertJsonsToLottie(path: path)
                     // 回调 JavaScript
                     if let callbackId = callbackId {
-                        sendResponseToReact(callbackId: callbackId, message: "Swift received: \(value)")
+                        sendResponseToReact(callbackId: callbackId, message: "Swift received: \(path)")
                     }
                 }
             default:

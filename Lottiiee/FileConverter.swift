@@ -55,7 +55,7 @@ class FileConverter {
         // 创建manifest.json
         let manifestURL = folderURL.appendingPathComponent("manifest.json")
         let manifestContent = """
-            {"version":"1","generator":"lottie_converter","author":"lark","animations":[{"id":"data"}]}
+            {"version":"1","generator":"lottiiee","author":"upmer","animations":[{"id":"data"}]}
             """
         try manifestContent.write(to: manifestURL, atomically: true, encoding: .utf8)
         

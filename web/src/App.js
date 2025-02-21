@@ -9,8 +9,8 @@ function App() {
     
     if (window.bridge) {
       window.bridge.callSwift(
-        "callSwiftFunction",
-        { value: "Hello from React!" },
+        "convertJsonsToLottie",
+        { path:"/Users/yuri/Downloads/sunset-V3-lottie" },
         (response) => {
           alert("Received from Swift:" + response);
           console.log("Received from Swift:", response);
