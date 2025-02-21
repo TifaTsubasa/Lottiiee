@@ -16,9 +16,10 @@ struct WebView: UIViewRepresentable {
     
     class Coordinator: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
         var parent: WebView
-        
+//        var bridge: WKWebViewJavascriptBridge
         init(_ parent: WebView) {
             self.parent = parent
+//            bridge = WKWebViewJavascriptBridge(webView: parent.webView!)
         }
         
         func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
