@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DA41983D2D6832BD00A79F1B /* build in Resources */ = {isa = PBXBuildFile; fileRef = DA41983C2D6832BD00A79F1B /* build */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DA4198202D6831C300A79F1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		DA41980E2D6831C000A79F1B /* Lottiiee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottiiee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA41981F2D6831C300A79F1B /* LottiieeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LottiieeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4198292D6831C300A79F1B /* LottiieeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LottiieeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA41983C2D6832BD00A79F1B /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; name = build; path = web/build; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		DA4198052D6831C000A79F1B = {
 			isa = PBXGroup;
 			children = (
+				DA41983C2D6832BD00A79F1B /* build */,
 				DA4198102D6831C000A79F1B /* Lottiiee */,
 				DA4198222D6831C300A79F1B /* LottiieeTests */,
 				DA41982C2D6831C300A79F1B /* LottiieeUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA41983D2D6832BD00A79F1B /* build in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +421,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.upmer.Lottiiee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
@@ -453,7 +461,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.upmer.Lottiiee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
