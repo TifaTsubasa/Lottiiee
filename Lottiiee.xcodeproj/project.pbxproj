@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA41983D2D6832BD00A79F1B /* build in Resources */ = {isa = PBXBuildFile; fileRef = DA41983C2D6832BD00A79F1B /* build */; };
+		DA6C72AE2D6910630067ABA1 /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = DA6C72AD2D6910630067ABA1 /* ZipArchive */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		DA41981F2D6831C300A79F1B /* LottiieeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LottiieeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4198292D6831C300A79F1B /* LottiieeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LottiieeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA41983C2D6832BD00A79F1B /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; name = build; path = web/build; sourceTree = "<group>"; };
+		DA6C72AF2D69113D0067ABA1 /* Lottiiee.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Lottiiee.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -42,6 +44,13 @@
 			);
 			target = DA41980D2D6831C000A79F1B /* Lottiiee */;
 		};
+		DA6C72A92D690F280067ABA1 /* Exceptions for "Lottiiee" folder in "LottiieeTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				FileConverter.swift,
+			);
+			target = DA41981E2D6831C300A79F1B /* LottiieeTests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -49,6 +58,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				DA6C70D42D6875660067ABA1 /* Exceptions for "Lottiiee" folder in "Lottiiee" target */,
+				DA6C72A92D690F280067ABA1 /* Exceptions for "Lottiiee" folder in "LottiieeTests" target */,
 			);
 			path = Lottiiee;
 			sourceTree = "<group>";
@@ -70,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA6C72AE2D6910630067ABA1 /* ZipArchive in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +104,7 @@
 		DA4198052D6831C000A79F1B = {
 			isa = PBXGroup;
 			children = (
+				DA6C72AF2D69113D0067ABA1 /* Lottiiee.xctestplan */,
 				DA41983C2D6832BD00A79F1B /* build */,
 				DA4198102D6831C000A79F1B /* Lottiiee */,
 				DA4198222D6831C300A79F1B /* LottiieeTests */,
@@ -131,6 +143,7 @@
 			);
 			name = Lottiiee;
 			packageProductDependencies = (
+				DA6C72AD2D6910630067ABA1 /* ZipArchive */,
 			);
 			productName = Lottiiee;
 			productReference = DA41980E2D6831C000A79F1B /* Lottiiee.app */;
@@ -214,6 +227,9 @@
 			);
 			mainGroup = DA4198052D6831C000A79F1B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DA6C72AC2D6910630067ABA1 /* XCRemoteSwiftPackageReference "ZipArchive" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DA41980F2D6831C000A79F1B /* Products */;
 			projectDirPath = "";
@@ -615,6 +631,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA6C72AC2D6910630067ABA1 /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZipArchive/ZipArchive.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA6C72AD2D6910630067ABA1 /* ZipArchive */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA6C72AC2D6910630067ABA1 /* XCRemoteSwiftPackageReference "ZipArchive" */;
+			productName = ZipArchive;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA4198062D6831C000A79F1B /* Project object */;
 }

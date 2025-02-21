@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "72E9B737-41D3-4C37-9E18-6E83BD9E086D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Lottiiee.xcodeproj",
+      "identifier" : "DA41980D2D6831C000A79F1B",
+      "name" : "Lottiiee"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:Lottiiee.xcodeproj",
+        "identifier" : "DA41981E2D6831C300A79F1B",
+        "name" : "LottiieeTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Lottiiee.xcodeproj",
+        "identifier" : "DA4198282D6831C300A79F1B",
+        "name" : "LottiieeUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
